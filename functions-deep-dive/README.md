@@ -1,11 +1,13 @@
-- title:  JavaScript Fundamentals: Functions Deep Dive
-- tags:  functions, javascript
+- title: JavaScript Fundamentals: Functions Deep Dive
+- tags: functions, javascript
 
 # Objectives
-* Be able to explain scope basics
-* Understand the difference between anonymous and named functions
+
+- Be able to explain scope basics
+- Understand the difference between anonymous and named functions
 
 # Resources
+
 - [JavaScript Functions (W3)](http://www.w3schools.com/js/js_functions.asp)
 - [JavaScript Scope](http://www.w3schools.com/js/js_scope.asp)
 - [Everything You Wanted To Know About JS Scope](https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
@@ -17,15 +19,16 @@ Functions are the fundamental building blocks of JavaScript programs. Functions 
 Functions are everywhere in JavaScript, including things like `console.log`, `prompt`, and array methods.
 
 ##Global vs local
-JavaScript variables can either be global or local. It is generally bad practice to create global variables. There is typically a single global variable that holds all other variables (e.g. `window`). 
+JavaScript variables can either be global or local. It is generally bad practice to create global variables. There is typically a single global variable that holds all other variables (e.g. `window`).
 
 ##Function declaration vs function expression
-There are two ways od defining functions: function expressions, and function declarations. Function declarations are completely hoisted; with function expressions, only the variable gets hoisted.
+There are two ways of defining functions: function expressions, and function declarations. Function declarations are completely hoisted; with function expressions, only the variable gets hoisted.
 
 ##Intro to scope
 Read the following: [JavaScript Scope](http://www.w3schools.com/js/js_scope.asp)
 
 And try to answer these questions:
+
 - What is 'scope?'
 - What's the difference between global and local variables?
 - How do we create local variables?
@@ -47,6 +50,7 @@ Then try to answer these questions:
 Read the first two sections of the following: [Anonymous JS Functions](http://thoughtsonscripts.blogspot.com/2012/01/javascript-anonymous-functions.html)
 
 And then answer the following questions:
+
 - What's an anonymous function?
 - Why would we need anonymous functions?
 - What are some advantages and disadvantages of anonymity?
@@ -65,28 +69,28 @@ Functions are called in a certain order, depending on where they;re invoked. Thi
 
 ###Demo: The call stack
 Enter the following in Chrome console and open dev tools:
+
 ```javascript
 function one() {
-	debugger;
-	console.log('one');
-	two();
+  debugger;
+  console.log("one");
+  two();
 }
 
 function two() {
-	debugger;
-	console.log('two');
-	three();
+  debugger;
+  console.log("two");
+  three();
 }
 
 function three() {
-	debugger;
-	console.log('three')
-	four();
+  debugger;
+  console.log("three");
+  four();
 }
 
 function four() {
-	debugger;		
-	console.log('four')
+  debugger;
+  console.log("four");
 }
 ```
-
